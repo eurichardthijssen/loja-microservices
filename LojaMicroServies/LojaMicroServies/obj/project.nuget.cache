@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "9A2zgnsT/KFQT2NuFXdtoBNGnVEi+xDOUYNytCvNCb1p8HawG+rCFqilQgj+lEbmTLs3DFQ0FFEmra9p+k6/HQ==",
+  "dgSpecHash": "Kgdk6PYzP41/BTAM9CINCJnhATD23VYdRByFbgpeBQFeRfpfGoxAgn291uVchxhH3F+zZrxHxr3AyUnL8/JM2A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\richard\\source\\repos\\loja-microservices\\LojaMicroServies\\LojaMicroServies\\LojaMicroServices.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\OneDrive\\Richard\\Estudos\\Tecnico\\20240508 - Curso Microservices\\Loja-microservices\\LojaMicroServies\\LojaMicroServies\\LojaMicroServices.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\euric\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\euric\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\euric\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\euric\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512"
+  ],
   "logs": []
 }

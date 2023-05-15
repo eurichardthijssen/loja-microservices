@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LojaMicroServices")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50a5410baefa52f82f98d41907411825de71e4f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("LojaMicroServices")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LojaMicroServices")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

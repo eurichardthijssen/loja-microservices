@@ -19,3 +19,29 @@ C:\Users\richard\source\repos\loja-microservices\LojaMicroServies\LojaMicroServi
 C:\Users\richard\source\repos\loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\LojaMicroServices.pdb
 C:\Users\richard\source\repos\loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\LojaMicroServices.genruntimeconfig.cache
 C:\Users\richard\source\repos\loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\ref\LojaMicroServices.dll
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\bin\Debug\net6.0\appsettings.Development.json
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\bin\Debug\net6.0\appsettings.json
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\bin\Debug\net6.0\LojaMicroServices.exe
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\bin\Debug\net6.0\LojaMicroServices.deps.json
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\bin\Debug\net6.0\LojaMicroServices.runtimeconfig.json
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\bin\Debug\net6.0\LojaMicroServices.dll
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\bin\Debug\net6.0\LojaMicroServices.pdb
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\LojaMicroServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\LojaMicroServices.AssemblyInfoInputs.cache
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\LojaMicroServices.AssemblyInfo.cs
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\LojaMicroServices.csproj.CoreCompileInputs.cache
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\LojaMicroServices.MvcApplicationPartsAssemblyInfo.cache
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\LojaMicroServices.sourcelink.json
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\staticwebassets.build.json
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\staticwebassets.development.json
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\staticwebassets\msbuild.LojaMicroServices.Microsoft.AspNetCore.StaticWebAssets.props
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\staticwebassets\msbuild.build.LojaMicroServices.props
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.LojaMicroServices.props
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.LojaMicroServices.props
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\staticwebassets.pack.json
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\scopedcss\bundle\LojaMicroServices.styles.css
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\LojaMicroServices.dll
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\refint\LojaMicroServices.dll
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\LojaMicroServices.pdb
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\LojaMicroServices.genruntimeconfig.cache
+D:\OneDrive\Richard\Estudos\Tecnico\20240508 - Curso Microservices\Loja-microservices\LojaMicroServies\LojaMicroServies\obj\Debug\net6.0\ref\LojaMicroServices.dll
