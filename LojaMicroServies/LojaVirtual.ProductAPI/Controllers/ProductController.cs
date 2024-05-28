@@ -32,7 +32,7 @@ namespace LojaVirtual.ProductAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create(ProductVO vo)
+        public async Task<ActionResult> Create([FromBody]ProductVO vo)
         {
             if (vo == null) return BadRequest();
             var product = await _repository.Create(vo);
@@ -40,14 +40,14 @@ namespace LojaVirtual.ProductAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> Update(ProductVO vo)
+        public async Task<ActionResult> Update([FromBody] ProductVO vo)
         {
             if (vo == null) return BadRequest();
             var product = await _repository.Update(vo);
             return Ok(product);
         }
 
-        [HttpDelete("id")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(long id)
         {
             
