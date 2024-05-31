@@ -1,0 +1,8 @@
+﻿namespace LojaVirtual.ProductAPI.Utils
+{
+    public static class Role
+    {
+        public const String Admin = "Admin";
+        public const String Client = "Client";
+    }
+}

@@ -7,9 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{E7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{4C895CA4-DDF5-4F37-B77B-A51D384D09A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.Web", "LojaVirtual.Web\LojaVirtual.Web.csproj", "{80B0935D-1618-4EEF-AE43-D9E511B53FBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaVirtual.Web", "LojaVirtual.Web\LojaVirtual.Web.csproj", "{80B0935D-1618-4EEF-AE43-D9E511B53FBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.ProductAPI", "LojaVirtual.ProductAPI\LojaVirtual.ProductAPI.csproj", "{61F40D29-23C3-4701-A85D-F960124FDE0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaVirtual.ProductAPI", "LojaVirtual.ProductAPI\LojaVirtual.ProductAPI.csproj", "{61F40D29-23C3-4701-A85D-F960124FDE0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.IdentityServer", "LojaVirtual.IdentityServer\LojaVirtual.IdentityServer.csproj", "{9FF66617-4AB0-446F-92FB-CB1924D20771}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{61F40D29-23C3-4701-A85D-F960124FDE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61F40D29-23C3-4701-A85D-F960124FDE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61F40D29-23C3-4701-A85D-F960124FDE0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FF66617-4AB0-446F-92FB-CB1924D20771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FF66617-4AB0-446F-92FB-CB1924D20771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FF66617-4AB0-446F-92FB-CB1924D20771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FF66617-4AB0-446F-92FB-CB1924D20771}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{80B0935D-1618-4EEF-AE43-D9E511B53FBE} = {E7880123-D4C5-401B-AD7F-E6B688F7F916}
 		{61F40D29-23C3-4701-A85D-F960124FDE0A} = {4C895CA4-DDF5-4F37-B77B-A51D384D09A2}
+		{9FF66617-4AB0-446F-92FB-CB1924D20771} = {4C895CA4-DDF5-4F37-B77B-A51D384D09A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DDD6AA8-FBE9-40A9-9B06-964C775E7FAF}

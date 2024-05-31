@@ -1,6 +1,7 @@
 ﻿using LojaVirtual.Web.Models;
 using LojaVirtual.Web.Services.IServices;
 using LojaVirtual.Web.Utils;
+using System.Net.Http.Headers;
 
 namespace LojaVirtual.Web.Services
 {
@@ -15,20 +16,23 @@ namespace LojaVirtual.Web.Services
             _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
         }
 
-        public async Task<IEnumerable<ProductModel>> FindAllProducts()
+        public async Task<IEnumerable<ProductModel>> FindAllProducts(string token)
         {
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = await _httpClient.GetAsync(BasePath);
             return await response.ReadContentAs<List<ProductModel>>();  
         }
 
-        public async Task<ProductModel> FindProductById(long id)
+        public async Task<ProductModel> FindProductById(long id, string token)
         {
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = await _httpClient.GetAsync($"{BasePath}/{id}");
             return await response.ReadContentAs<ProductModel>();
         }
 
-        public async Task<ProductModel> CreateProduct(ProductModel model)
+        public async Task<ProductModel> CreateProduct(ProductModel model, string token)
         {
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = await _httpClient.PostAsJson(BasePath, model);
             if (response.IsSuccessStatusCode)
                 return await response.ReadContentAs<ProductModel>();
@@ -36,8 +40,9 @@ namespace LojaVirtual.Web.Services
                 throw new Exception("Erro ao chamar a API");
         }
 
-        public async Task<ProductModel> UpdateProduct(ProductModel model)
+        public async Task<ProductModel> UpdateProduct(ProductModel model, string token)
         {
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = await _httpClient.PutAsJson(BasePath, model);
             if (response.IsSuccessStatusCode)
                 return await response.ReadContentAs<ProductModel>();
@@ -45,8 +50,9 @@ namespace LojaVirtual.Web.Services
                 throw new Exception("Erro ao chamar a API");
         }
 
-        public async Task<bool> DeleteProductById(long id)
+        public async Task<bool> DeleteProductById(long id, string token)
         {
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = await _httpClient.DeleteAsync($"{BasePath}/{id}");
             if (response.IsSuccessStatusCode)
                 return await response.ReadContentAs<bool>();
