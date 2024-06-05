@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaVirtual.Web", "LojaVirt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaVirtual.ProductAPI", "LojaVirtual.ProductAPI\LojaVirtual.ProductAPI.csproj", "{61F40D29-23C3-4701-A85D-F960124FDE0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.IdentityServer", "LojaVirtual.IdentityServer\LojaVirtual.IdentityServer.csproj", "{9FF66617-4AB0-446F-92FB-CB1924D20771}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaVirtual.IdentityServer", "LojaVirtual.IdentityServer\LojaVirtual.IdentityServer.csproj", "{9FF66617-4AB0-446F-92FB-CB1924D20771}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaVirtual.CartAPI", "LojaVirtual.CartAPI\LojaVirtual.CartAPI.csproj", "{103C5E7E-A791-4555-9573-CC6AFE74F435}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.CouponAPI", "LojaVirtual.CouponAPI\LojaVirtual.CouponAPI.csproj", "{F129CF38-64A1-4437-8B67-9BE479BC7007}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,14 @@ Global
 		{9FF66617-4AB0-446F-92FB-CB1924D20771}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FF66617-4AB0-446F-92FB-CB1924D20771}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FF66617-4AB0-446F-92FB-CB1924D20771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{103C5E7E-A791-4555-9573-CC6AFE74F435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{103C5E7E-A791-4555-9573-CC6AFE74F435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{103C5E7E-A791-4555-9573-CC6AFE74F435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{103C5E7E-A791-4555-9573-CC6AFE74F435}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F129CF38-64A1-4437-8B67-9BE479BC7007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F129CF38-64A1-4437-8B67-9BE479BC7007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F129CF38-64A1-4437-8B67-9BE479BC7007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F129CF38-64A1-4437-8B67-9BE479BC7007}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +51,8 @@ Global
 		{80B0935D-1618-4EEF-AE43-D9E511B53FBE} = {E7880123-D4C5-401B-AD7F-E6B688F7F916}
 		{61F40D29-23C3-4701-A85D-F960124FDE0A} = {4C895CA4-DDF5-4F37-B77B-A51D384D09A2}
 		{9FF66617-4AB0-446F-92FB-CB1924D20771} = {4C895CA4-DDF5-4F37-B77B-A51D384D09A2}
+		{103C5E7E-A791-4555-9573-CC6AFE74F435} = {4C895CA4-DDF5-4F37-B77B-A51D384D09A2}
+		{F129CF38-64A1-4437-8B67-9BE479BC7007} = {4C895CA4-DDF5-4F37-B77B-A51D384D09A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DDD6AA8-FBE9-40A9-9B06-964C775E7FAF}
