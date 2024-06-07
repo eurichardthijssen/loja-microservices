@@ -17,11 +17,6 @@ namespace LojaVirtual.CartAPI.Repository
             _mapper = mapper;
         }
 
-        public async Task<bool> ApplyCoupon(string userId, string couponCode)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<bool> ClearCart(string userId)
         {
             var cartHeader = await _context.CartHeaders.FirstOrDefaultAsync(c => c.UserId == userId);
@@ -39,28 +34,37 @@ namespace LojaVirtual.CartAPI.Repository
         {
             Cart cart = new Cart()
             {
-                CartHeader = await _context.CartHeaders
-                    .FirstOrDefaultAsync(c => c.UserId == userId)
+                CartHeader = await _context.CartHeaders.FirstOrDefaultAsync(c => c.UserId == userId)
             };
-            cart.CartDetails = _context.CartDetails
-                .Where(c => c.CartHeaderId == cart.CartHeader.Id)
-                    .Include(c => c.Product);
+            cart.CartDetails = _context.CartDetails.Where(c => c.CartHeaderId == cart.CartHeader.Id).Include(c => c.Product);
 
             return _mapper.Map<CartVO>(cart);
         }
 
-        public async Task<bool> RemoveCoupon(string userId)
+        public async Task<bool> ApplyCoupon(string userId, string couponCode)
         {
-            try
+            var header = await _context.CartHeaders.FirstOrDefaultAsync(c => c.UserId == userId);
+            if (header != null)
             {
-
+                header.CouponCode = couponCode;
+                _context.CartHeaders.Update(header);
+                await _context.SaveChangesAsync();
                 return true;
             }
-            catch (Exception)
-            {
+            return false;
+        }
 
-                return false;
+        public async Task<bool> RemoveCoupon(string userId)
+        {
+            var header = await _context.CartHeaders.FirstOrDefaultAsync(c => c.UserId == userId);
+            if (header != null)
+            {
+                header.CouponCode = "";
+                _context.CartHeaders.Update(header);
+                await _context.SaveChangesAsync();
+                return true;
             }
+            return false;
         }
 
         public async Task<bool> RemoveFromCart(long cartDetailId)

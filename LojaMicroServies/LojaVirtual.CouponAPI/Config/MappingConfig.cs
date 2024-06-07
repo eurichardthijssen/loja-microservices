@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using LojaVirtual.CouponAPI.Data.ValueObjects;
+using LojaVirtual.CouponAPI.Model;
 
 namespace LojaVirtual.CouponAPI.Config
 {
@@ -8,7 +10,7 @@ namespace LojaVirtual.CouponAPI.Config
         {
             var mappingConfig = new MapperConfiguration(config =>
             {
-                
+                config.CreateMap<CouponVO,Coupon>().ReverseMap();
             });
             return mappingConfig;
         }
