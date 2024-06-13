@@ -1,8 +1,6 @@
-using AutoMapper;
-using LojaVirtual.CartAPI.Config;
-using LojaVirtual.CartAPI.Model.Context;
-using LojaVirtual.CartAPI.RabbitMQSender;
-using LojaVirtual.CartAPI.Repository;
+using LojaVirtual.OrderApi.MessageConsumer;
+using LojaVirtual.OrderApi.Repository;
+using LojaVirtual.OrderAPI.Model.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -10,21 +8,19 @@ using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
 var connection = builder.Configuration["MySQLConnection:MySQLConnectionString"];
 builder.Services.AddDbContext<MySQLContext>(options => options.UseMySql(connection, new MySqlServerVersion(new Version(8, 4))));
 
-IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
-builder.Services.AddSingleton(mapper);
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+//builder.Services.AddScoped<ICartRepository, CartRepository>();
+var builderContext = new DbContextOptionsBuilder<MySQLContext>();
+builderContext.UseMySql(connection, new MySqlServerVersion(new Version(8, 4)));
 
-builder.Services.AddScoped<ICartRepository, CartRepository>();
-builder.Services.AddScoped<ICouponRepository, CouponRepository>();
+builder.Services.AddSingleton(new OrderRepository(builderContext.Options));
 
-builder.Services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
+builder.Services.AddHostedService<RabbitMQCheckoutConsumer>();
 
 builder.Services.AddControllers();
-
-builder.Services.AddHttpClient<ICouponRepository, CouponRepository>(s => s.BaseAddress = new Uri(builder.Configuration["ServiceUrls:CouponAPI"]));
 
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
@@ -49,7 +45,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "lojavirtual.CartAPI", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "lojavirtual.OrderAPI", Version = "v1" });
     c.EnableAnnotations();
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {

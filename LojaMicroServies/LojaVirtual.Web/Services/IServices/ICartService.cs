@@ -11,6 +11,6 @@ namespace LojaVirtual.Web.Services.IServices
         Task<bool> ClearCart(string userId, string token);
         Task<bool> ApplyCoupon(CartViewModel cart, string token);
         Task<bool> RemoveCoupon(string userId, string token);
-        Task<CartHeaderViewModel> Checkout(CartHeaderViewModel cartHeader, string token);
+        Task<Object> Checkout(CartHeaderViewModel cartHeader, string token);
     }
 }

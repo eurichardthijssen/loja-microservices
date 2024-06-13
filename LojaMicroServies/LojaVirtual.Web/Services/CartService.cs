@@ -73,13 +73,18 @@ namespace LojaVirtual.Web.Services
                 throw new Exception("Erro ao chamar a API");
         }
 
-        public async Task<CartHeaderViewModel> Checkout(CartHeaderViewModel cartHeader, string token)
+        public async Task<Object> Checkout(CartHeaderViewModel cartHeader, string token)
         {
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = await _httpClient.PostAsJson($"{BasePath}/checkout",cartHeader);
             if (response.IsSuccessStatusCode)
+            {
                 return await response.ReadContentAs<CartHeaderViewModel>();
-            else
+            }
+            else if (response.StatusCode.ToString().Equals("PreconditionFailed")) 
+            {
+                return "O desconto do cupom mudou, verifique o novo valor e confirme sua compra.";
+            }
                 throw new Exception("Erro ao chamar a API");
         }
 
