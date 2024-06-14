@@ -1,0 +1,6 @@
+@LojaVirtual.PaymentAPI_HostAddress = http://localhost:5171
+
+GET {{LojaVirtual.PaymentAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

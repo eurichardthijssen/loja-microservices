@@ -2,8 +2,6 @@
 using LojaVirtual.CartAPI.Messages;
 using LojaVirtual.CartAPI.RabbitMQSender;
 using LojaVirtual.CartAPI.Repository;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LojaVirtual.CartAPI.Controllers
@@ -75,6 +73,7 @@ namespace LojaVirtual.CartAPI.Controllers
         public async Task<ActionResult<CheckoutHeaderVO>> Checkout(CheckoutHeaderVO vo)
         {
             string token = Request.Headers["Authorization"];
+            //var token = await HttpContext.GetTokenAsync("access_token");
 
             if (vo?.UserId == null) return BadRequest();
             var cart = await _cartRepository.FindCartByUserId(vo.UserId);

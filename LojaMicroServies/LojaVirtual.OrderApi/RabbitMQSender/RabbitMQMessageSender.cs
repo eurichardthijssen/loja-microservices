@@ -1,10 +1,10 @@
-﻿using LojaVirtual.CartAPI.Messages;
-using LojaVirtual.MessageBus;
+﻿using LojaVirtual.MessageBus;
+using LojaVirtual.OrderApi.Messages;
 using RabbitMQ.Client;
 using System.Text;
 using System.Text.Json;
 
-namespace LojaVirtual.CartAPI.RabbitMQSender
+namespace LojaVirtual.OrderAPI.RabbitMQSender
 {
     public class RabbitMQMessageSender : IRabbitMQMessageSender
     {
@@ -39,7 +39,7 @@ namespace LojaVirtual.CartAPI.RabbitMQSender
             {
                 WriteIndented = true,
             };
-            var json = JsonSerializer.Serialize<CheckoutHeaderVO>((CheckoutHeaderVO)message, options);
+            var json = JsonSerializer.Serialize<PaymentVO>((PaymentVO)message, options);
             var body = Encoding.UTF8.GetBytes(json);
             return body;
         }
