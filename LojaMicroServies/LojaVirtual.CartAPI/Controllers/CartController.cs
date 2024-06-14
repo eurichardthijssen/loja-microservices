@@ -93,6 +93,7 @@ namespace LojaVirtual.CartAPI.Controllers
             //Em vez de ir para o repositório o RabbitMQ entrará aqui
             _rabbitMQMessageSender.SendMessage(vo, "checkoutqueue");
 
+            await _cartRepository.ClearCart(vo.UserId);
             return Ok(vo);
         }
     }
