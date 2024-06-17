@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.PaymentProcesso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.PaymentAPI", "LojaVirtual.PaymentAPI\LojaVirtual.PaymentAPI.csproj", "{706FDD74-8A71-48EC-9E0D-9C1DDADCAAD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.Email", "LojaVirtual.Email\LojaVirtual.Email.csproj", "{0FA6D099-6C8F-4850-BAD6-684EC8E70BFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{706FDD74-8A71-48EC-9E0D-9C1DDADCAAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{706FDD74-8A71-48EC-9E0D-9C1DDADCAAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{706FDD74-8A71-48EC-9E0D-9C1DDADCAAD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FA6D099-6C8F-4850-BAD6-684EC8E70BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FA6D099-6C8F-4850-BAD6-684EC8E70BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FA6D099-6C8F-4850-BAD6-684EC8E70BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FA6D099-6C8F-4850-BAD6-684EC8E70BFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +91,7 @@ Global
 		{AC4BD2CB-670B-45D7-A3E2-39FDD05043CC} = {4C895CA4-DDF5-4F37-B77B-A51D384D09A2}
 		{81297C87-2CC2-4F0C-9C53-2AD3150AA3C6} = {897353D6-4E78-4BE7-ADC7-0367593050E3}
 		{706FDD74-8A71-48EC-9E0D-9C1DDADCAAD8} = {4C895CA4-DDF5-4F37-B77B-A51D384D09A2}
+		{0FA6D099-6C8F-4850-BAD6-684EC8E70BFB} = {4C895CA4-DDF5-4F37-B77B-A51D384D09A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DDD6AA8-FBE9-40A9-9B06-964C775E7FAF}

@@ -1,14 +1,12 @@
-using LojaVirtual.OrderApi.MessageConsumer;
-using LojaVirtual.OrderApi.Repository;
-using LojaVirtual.OrderAPI.Model.Context;
-using LojaVirtual.OrderAPI.RabbitMQSender;
+using LojaVirtual.Email.MessageConsumer;
+using LojaVirtual.Email.Model.Context;
+using LojaVirtual.Email.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 var connection = builder.Configuration["MySQLConnection:MySQLConnectionString"];
 builder.Services.AddDbContext<MySQLContext>(options => options.UseMySql(connection, new MySqlServerVersion(new Version(8, 4))));
@@ -16,12 +14,11 @@ builder.Services.AddDbContext<MySQLContext>(options => options.UseMySql(connecti
 var builderContext = new DbContextOptionsBuilder<MySQLContext>();
 builderContext.UseMySql(connection, new MySqlServerVersion(new Version(8, 4)));
 
-builder.Services.AddSingleton(new OrderRepository(builderContext.Options));
+builder.Services.AddSingleton(new EmailRepository(builderContext.Options));
 
-builder.Services.AddHostedService<RabbitMQCheckoutConsumer>();
+builder.Services.AddScoped<IEmailRepository, EmailRepository>();
+
 builder.Services.AddHostedService<RabbitMQPaymentConsumer>();
-
-builder.Services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
 
 builder.Services.AddControllers();
 
@@ -48,7 +45,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "lojavirtual.OrderAPI", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "lojavirtual.EmailAPI", Version = "v1" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = @"Enter 'Bearer' [space] and your token!",
