@@ -60,7 +60,8 @@ namespace LojaVirtual.PaymentAPI.MessageConsumer
 
             try
             {
-                _messageSender.SendMessage(paymentResult, "orderpaymentresultqueue");
+                //_messageSender.SendMessage(paymentResult, "orderpaymentresultqueue");
+                _messageSender.SendMessage(paymentResult);
             }
             catch (Exception)
             {
